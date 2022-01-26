@@ -16,11 +16,9 @@ import string
 import datetime
 from dateutil.relativedelta import relativedelta
 from csv import reader
-from flask_cors import CORS
 from os.path import dirname, join
 
 app = Flask(__name__)
-CORS(app)
 current_dir = dirname(__file__)
 model_path = join(current_dir, "./SVM_Model.pkl")
 model = pickle.load(open(model_path, 'rb'))
