@@ -268,11 +268,11 @@ def featureExtraction(url):
 
   return features
 
-@app.route('/',methods=["GET","POST"])
+@app.route('/')
 def home():
     return "Hello World"
 
-@app.route('/post',methods=['POST'])
+@app.route('/post',methods=["POST"])
 def predict():
   url=str(request.args.get('URL'))
   #return jsonify(url)
